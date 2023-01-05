@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./icofont/icofont.min.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        padding-left: 30px;
+        width: 100%;
+        background-color: aliceblue;
+      }
+      .headerleft {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .headerleft h1 {
+        background-color: blue;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0px 5px;
+      }
+      .headerleft input {
+        border: none;
+        outline: none;
+        background: none;
+      }
+      .headerleft div {
+        border: 1px solid black;
+        padding: 5px 7px;
+        background-color: rgb(238, 243, 248);
+        width: 200px;
+      }
+      .headercenter {
+        display: flex;
+      }
+      .headercenter .na {
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .headercenter .na img {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+      }
+      .headerRight {
+        display: flex;
+        width: 80px;
+      }
+      .bdy {
+        width: 100%;
+        background-color: rgb(243, 242, 239);
+        display: flex;
+      }
+      .bodyLeft {
+        width: 20%;
+        margin: 10px 15px 5px 50px;
+        background-color: rgb(243, 242, 239);
+      }
+      .bodyCenter {
+        width: 40%;
+        margin: 10px 15px 5px 50px;
+        background-color: whitesmoke;
+        padding: 5px 10px;
+      }
+      .bodyRight {
+        width: 30%;
+        margin: 10px 15px 5px 50px;
+        background-color: white;
+      }
+      .bdylftdiv,
+      .scndhdrleftdiv {
+        width: 382px;
+        height: fit-content;
+        border-radius: 12% 12%;
+        background-color: rgb(255, 255, 255);
+        margin: 10px;
+      }
+      .hdrim {
+        width: 382px;
+        height: 100px;
+        border-radius: 20% 20% 0% 0%;
+        position: absolute;
+        z-index: 0;
+      }
+      .pfg {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0px auto;
+        border-radius: 25px;
+        position: relative;
+        top: 70px;
+      }
+      .Pname {
+        margin: 75px 10px 10px 10px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .Prole {
+        margin: 10px 10px 20px 10px;
+        text-align: center;
+        font-size: 15px;
+      }
+      .pss,
+      .ab {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 5px 0px;
+      }
+      .ab {
+        text-align: start;
+        margin: 5px 10px;
+      }
+      .pss {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 10px;
+      }
+      .abs {
+        justify-content: start;
+        padding: 5px;
+        align-items: center;
+      }
+      .abs i {
+        margin: 5px;
+        color: yellow;
+        font-size: 25px;
+      }
+      .abs a {
+        text-decoration: none;
+        color: black;
+      }
+      .as i {
+        margin-left: 20px;
+        color: black;
+      }
+      .dsmre {
+        padding: 15px;
+        font-size: 18px;
+        margin: 5px 10px;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        color: black;
+      }
+      .pfig {
+        width: 60px;
+        height: 60px;
+        border-radius: 25px;
+      }
+      .mdlediv {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 20px 20px 0px 0px;
+      }
+      .mdlediv input {
+        width: 90%;
+        height: 40px;
+        margin: 2px 10px;
+        border-radius: 20px;
+        outline: 1px solid black;
+        border: none;
+        background: none;
+      }
+      .spnics {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        font-size: 30px;
+        background-color: white;
+        padding-bottom: 10px;
+        border-radius: 0px 0px 20px 20px;
+      }
+      .ctnhr {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        height: 20px;
+        margin: 15px 0px;
+      }
+      .ctnhr p {
+        padding-left: 10px;
+        font-size: large;
+      }
+      hr {
+        width: 80%;
+        height: 0.8px;
+      }
+      .widgetOne {
+        background-color: white;
+        padding: 10px 0px;
+        margin: 20px 5px;
+        border-radius: 20px;
+      }
+      .widgetOne img {
+        width: 50%;
+        height: 200px;
+        display: block;
+        margin: 5px auto;
+      }
+      .widgetPone {
+        font-size: 30px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        margin: 10px;
+      }
+      .widgetPtwo {
+        font-size: 25px;
+        font-weight: 400;
+        text-align: center;
+        margin: 10px;
+        color: black;
+      }
+      .widgetOne div {
+        display: flex;
+        justify-content: space-around;
+      }
+      .widgetOne span {
+        border: 1px solid blue;
+        padding: 10px 150px;
+        margin: 5px 15px;
+        border-radius: 20px;
+      }
+
+      .fbctn {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid grey;
+        padding-bottom: 5px;
+      }
+      .fbctn p,
+      .fbctn small,
+      .fbctn i {
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .fbctn small {
+        padding-left: 5px;
+        color: rgb(181, 181, 181);
+      }
+      .fbctn i {
+        padding-left: 50%;
+        font-size: 30px;
+      }
+      .spnctntwo {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+      }
+      .pffig {
+        height: 80px;
+        width: 80px;
+      }
+      .pspsnn,
+      .spnctntwo small,
+      .spnctntwo i {
+        padding-left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .spnctntwo small {
+        color: rgb(181, 181, 181);
+      }
+      .spnctntwo i {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="headerleft">
+        <h1>in</h1>
+        <div>
+          <i class="icofont-search-1"></i>
+          <input type="text" />
+        </div>
+      </div>
+      <div class="headercenter">
+        <span class="na"><i class="icofont-home"></i> Home</span>
+        <span class="na"><i class="icofont-people"></i> My Network</span>
+        <span class="na"><i class="icofont-briefcase-2"> </i> Jobs</span>
+        <span class="na"
+          ><i class="icofont-speech-comments"></i> Messaging</span
+        >
+        <span class="na"><i class="icofont-alarm"></i> Notifications</span>
+        <span class="na"><img src="./profileimage.jpg" alt="" /> Me</span>
+      </div>
+      <div class="headerRight">
+        <span class="ihun">
+          <i class="icofont-calendar"></i>
+        </span>
+        <span>
+          <p>Work</p>
+          <i class="icofont-arrow-down"></i>
+        </span>
+        <p class="hdP">Try premium for free</p>
+      </div>
+    </header>
+    <main class="bdy">
+      <section class="bodyLeft">
+        <div class="bdylftdiv">
+          <div>
+            <img src="./spotn.jpg" alt="" class="hdrim" />
+            <img src="./profileimage.jpg" alt="" class="pfg" />
+          </div>
+          <p class="Pname">Lawal Isiaka</p>
+          <p class="Prole">
+            Information Technology Support Technician at regent microfinance
+            bank
+          </p>
+          <span>
+            <span class="pss">
+              <p>Connections</p>
+              <p>3</p>
+            </span>
+            <p class="ab">Grow your network</p>
+          </span>
+          <span class="pss">
+            <p>Invitation</p>
+            <p>1</p>
+          </span>
+          <span class="pss abs">
+            <i class="icofont-eye-blocked"></i>
+            <a href="">Try Premium for free</a>
+          </span>
+          <p class="ab">Access exclusive tools & insights</p>
+          <span class="pss abs as">
+            <i class="icofont-clip"></i>
+            <p>My items</p>
+          </span>
+        </div>
+        <div class="scndhdrleftdiv">
+          <p class="ab">Recent</p>
+          <span class="pss abs as"
+            ><i class="icofont-people"></i>Information Technolgy (IT) L..</span
+          >
+          <p class="ab">Groups</p>
+          <span class="pss abs as"
+            ><i class="icofont-people"></i>Information Technolgy (IT) L..</span
+          >
+          <span class="pss">
+            <p>Events</p>
+            <i class="icofont-plus"></i>
+          </span>
+          <p class="ab">Follwed Hashtags</p>
+          <p class="dsmre"></p>
+          <a href="" class="dsmre">Discover more</a>
+        </div>
+      </section>
+      <section class="bodyCenter">
+        <div class="widgetOne">
+          <img src="./nerd.svg" alt="" />
+          <p class="widgetPone">Hi, are you looking for a job right now?</p>
+          <p class="widgetPtwo">
+            We can help you prepare for your search. Your response is private to
+            you.
+          </p>
+          <div>
+            <span>Yes</span>
+            <span>No</span>
+          </div>
+        </div>
+        <div class="mdlediv">
+          <img src="./profileimage.jpg" alt="" class="pfig" />
+          <input type="text" />
+        </div>
+        <span class="spnics">
+          <i class="icofont-image" style="color: rgb(55, 143, 233)"></i>
+          <i class="icofont-video-clapper" style="color: rgb(95, 155, 65)"> </i>
+          <i class="icofont-calendar" style="color: rgb(195, 125, 22)"></i>
+          <i class="icofont-pen" style="color: #e16745"></i>
+        </span>
+        <div class="ctnhr">
+          <hr />
+          <p>Sort by: top <i class="icofont-arrow-down"></i></p>
+        </div>
+        <div class="mdlectntwo">
+          <span class="fbctn">
+            <img src="./spot3.jpg" alt="" class="pfig" />
+            <p>Kehinde Olaleye <small>support this</small></p>
+            <i class="icofont-opencart"></i>
+          </span>
+          <span class="spnctntwo">
+            <img src="./spot3.jpg" alt="" class="pfig pffig" />
+            <p class="pspsnn">Kehinde Olaleye</p>
+            <i class="icofont-stop"></i>
+            <small>Following</small>
+          </span>
+        </div>
+      </section>
+      <section class="bodyRight"></section>
+    </main>
+  </body>
+</html>

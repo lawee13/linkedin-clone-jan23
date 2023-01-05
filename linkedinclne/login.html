@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        padding: 30px 20px 10px 20px;
+        color: rgb(10, 102, 194);
+        font-size: small;
+      }
+      header span {
+        background-color: rgb(10, 102, 194);
+        color: white;
+        padding: 0px 2px;
+        border-radius: 3px;
+      }
+      section {
+        box-shadow: -1px -1px 3px;
+        margin: 10px auto;
+        width: 30%;
+        padding: 20px;
+      }
+      section h2 {
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 30px;
+        padding: 5px 0px;
+        line-height: 24px;
+      }
+      section h6 {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.7);
+        padding: 5px 0px;
+        line-height: 20px;
+      }
+      input {
+        display: block;
+        padding: 5px 0px;
+        margin: 15px 0px;
+        width: 95%;
+        height: 50px;
+        border: 1px solid blue;
+        border-radius: 3px;
+      }
+      form div input {
+        border: none;
+        outline: none;
+        background: none;
+      }
+      form div {
+        border: 1px solid blue;
+        display: flex;
+        width: 95%;
+        border-radius: 3px;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+      }
+      form div span {
+        color: blue;
+      }
+      form a {
+        color: blue;
+        font-size: 15px;
+        text-decoration: none;
+        display: block;
+        margin: 10px 0px;
+      }
+      .sgn {
+        display: block;
+        background-color: rgb(10, 102, 194);
+        color: white;
+        width: 95%;
+        height: 50px;
+        border-radius: 30px;
+        padding: 15px 0px;
+        text-align: center;
+      }
+      .sgn:hover {
+        background-color: rgba(10, 102, 194, 0.7);
+      }
+      .or {
+        display: block;
+        color: rgba(0, 0, 0, 0.7);
+        width: 95%;
+        height: 30px;
+        text-align: center;
+        margin: 15px 0px;
+        position: relative;
+      }
+      .or p,
+      .or hr {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      .or p {
+        width: 20%;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .or hr {
+        z-index: -10;
+      }
+      .gimg,
+      .apleimg {
+        width: 15px;
+        height: 15px;
+      }
+      .spg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 95%;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 30px;
+        margin: 15px 0px;
+      }
+      .spg p {
+        padding: 0px 2px;
+      }
+      .spg:hover {
+        background-color: whitesmoke;
+        border: 1.5px solid black;
+      }
+      .ft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin-top: 20px;
+      }
+      .ft a {
+        text-decoration: none;
+        color: blue;
+        padding-left: 5px;
+      }
+      .ft a:hover {
+        background-color: #0a66c2;
+        border-radius: 5px;
+        height: 30px;
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Linked <span>in</span></h1>
+      </div>
+    </header>
+    <section>
+      <h2>Sign in</h2>
+      <h6>Stay updated on your professional world</h6>
+      <form action="">
+        <input type="text" placeholder="Email or Phone" />
+        <div><input type="text" placeholder="Password" /><span>show</span></div>
+        <a href="">Forgot password?</a>
+      </form>
+      <span class="sgn">Sign in</span>
+      <span class="or">
+        <p>or</p>
+        <hr
+      /></span>
+      <span class="spg"
+        ><img src="./gimg.png" alt="" class="gimg" />
+        <p>Sign in with Google</p></span
+      >
+      <span class="spg"
+        ><img src="./apleimg2.png" alt="" class="apleimg" />
+        <p>Sign in with Apple</p></span
+      >
+      <div class="ft">
+        <span>New to LinkedIn? </span><a href="./signup.html">Join now</a>
+      </div>
+    </section>
+  </body>
+</html>

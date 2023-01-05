@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./icofont/icofont.min.css" />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        color: rgb(10, 102, 194);
+        font-size: small;
+      }
+      .in {
+        background-color: rgb(10, 102, 194);
+        color: white;
+        padding: 0px 2px;
+        border-radius: 3px;
+      }
+      .nav {
+        color: black;
+        padding-left: 10px;
+        display: flex;
+      }
+      .nav span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+        font-size: 15px;
+      }
+      .sgn {
+        border: 1px solid black;
+        background-color: blue;
+      }
+      .sgn {
+        border: 2px solid blue;
+        padding: 10px;
+        margin: 5px 0px;
+        text-align: center;
+        background-color: blue;
+        border-radius: 15px;
+        width: 80%;
+        display: block;
+      }
+      .hr {
+        border-right: 2px solid grey;
+      }
+      .fsect {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+      }
+      .fsect div {
+        width: 50%;
+        padding: 5px 20px;
+      }
+      .fsect div h2 {
+        padding: 10px 50px 50px 10px;
+        font-size: 50px;
+      }
+      .oinp,
+      .inp {
+        width: 80%;
+        height: 30px;
+        margin: 10px 3px;
+      }
+      .oinp {
+        border: 1px solid black;
+      }
+      .inp {
+        outline: none;
+        border: none;
+        background: none;
+      }
+      .spninp {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        border: 1px solid black;
+        margin: 10px 3px;
+      }
+      form a {
+        display: block;
+      }
+      .fsect img {
+        width: 50%;
+        height: 500px;
+      }
+      .sndsect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        background-color: whitesmoke;
+      }
+      .tabs {
+        padding: 15px 30px;
+        border: 1px solid black;
+        border-radius: 25px;
+        margin: 10px;
+      }
+      .sectdiv {
+        width: 50%;
+        padding: 50px 20px;
+      }
+      .scd {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .sectdiv h2 {
+        padding: 10px 70px;
+        font-size: 48px;
+        font-weight: 400px;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.9);
+        font-style: normal;
+      }
+      .sgn {
+        display: block;
+        background-color: rgb(10, 102, 194);
+        color: white;
+        width: 95%;
+        height: 50px;
+        border-radius: 30px;
+        padding: 15px 0px;
+        text-align: center;
+      }
+      .sgn:hover {
+        background-color: rgba(10, 102, 194, 0.7);
+      }
+      .or {
+        display: block;
+        color: rgba(0, 0, 0, 0.7);
+        width: 95%;
+        height: 30px;
+        text-align: center;
+        margin: 15px 0px;
+        position: relative;
+      }
+      .or p,
+      .or hr {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      .or p {
+        width: 20%;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .or hr {
+        z-index: -10;
+      }
+      .spg img {
+        width: 15px;
+        height: 15px;
+      }
+
+      .spg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        width: 95%;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 30px;
+        margin: 15px 0px;
+      }
+      .spg p {
+        padding: 0px 2px;
+      }
+      .spg:hover {
+        background-color: whitesmoke;
+        border: 1.5px solid black;
+      }
+      .trdsect {
+        padding: 10px;
+        display: flex;
+        height: 300px;
+      }
+      .idv h2 {
+        font-size: 40px;
+        font-weight: 700;
+        padding: 100px;
+      }
+      .sgsrh {
+        width: 100%;
+      }
+      .iidiv {
+        display: flex;
+        flex-wrap: wrap;
+        height: 90%;
+      }
+
+      .iidiv span {
+        padding: 0px 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+      }
+      .aln {
+        text-decoration: none;
+        color: black;
+      }
+      .fthsect {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(241, 236, 229);
+      }
+      .aispn {
+        font-size: 35px;
+        font-weight: 700;
+        padding: 10px 150px;
+        width: 50%;
+        color: rgb(182, 76, 46);
+      }
+      .aiisect {
+        font-size: 25px;
+        font-weight: 700;
+        width: fit-content;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px 10px;
+      }
+      .sixfthsetc {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        background-color: rgb(243, 242, 240);
+      }
+      .sectD {
+        width: 50%;
+      }
+      .sectD h2 {
+        padding: 100px 250px 5px 80px;
+        font: 30px;
+        color: rgb(182, 76, 46);
+      }
+      .sectD h6 {
+        padding: 10px 150px 5px 80px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      .svnsect {
+        height: 500px;
+        /* width: 100%; */
+      }
+      .mdiv {
+        display: flex;
+        width: 100%;
+        padding: 5px;
+        justify-content: space-between;
+      }
+      .mdiv img {
+        width: 300px;
+        height: 310px;
+        margin: 20px 150px;
+      }
+      .crtctn {
+        display: flex;
+      }
+      .nbrd {
+        font-size: 30px;
+        padding: 20px 10px;
+        margin: 20px 150px;
+      }
+      .crt {
+        display: flex;
+        flex-direction: column;
+      }
+      .wbrd {
+        font-size: 20px;
+        padding: 20px 10px;
+        margin: 10px 150px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .eigsect {
+        width: 100%;
+        height: 500px;
+        padding-top: 100px;
+      }
+      .eigsect h1 {
+        width: 100%;
+        padding: 10px 100px;
+        color: rgb(50, 50, 50);
+        font-weight: 200;
+        font-size: 45px;
+        color: rgba(0, 0, 0, 0.9);
+      }
+      .btspn {
+        padding: 15px 10px;
+        border: 1px solid black;
+        border-radius: 25px;
+        margin: 20px 100px;
+        padding: 15px 20px;
+        display: block;
+        width: fit-content;
+        background-color: rgb(10, 102, 194);
+      }
+      .ftctn {
+        display: flex;
+        padding: 30px;
+        margin: 30px;
+        justify-content: space-around;
+        background-color: rgb(243, 242, 240);
+      }
+      .ftctn span {
+        display: block;
+        padding: 10px;
+        margin: 5px;
+      }
+      .tbctn,
+      .stbctn,
+      .thrctn,
+      .fetctn {
+        padding: 5px 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Linked <span class="in">in</span></h1>
+      </div>
+      <div class="nav">
+        <span class="navicn"><i class="icofont-compass"></i> Discover</span>
+        <span class="navicn"><i class="icofont-people"></i>People</span>
+        <span class="navicn"><i class="icofont-file-video"></i>Learning</span>
+        <span class="hr"><i class="icofont-briefcase-2"></i>Jobs</span>
+        <span>Join now </span>
+        <span class="sgin">Sign in</span>
+      </div>
+    </header>
+    <section class="fsect">
+      <div class="pttf">
+        <h2>Welcome to your professional community</h2>
+        <form action="">
+          <input type="text" placeholder="Email or Phone" class="oinp" />
+          <span class="spninp">
+            <input type="text" placeholder="Password" class="inp" /><span
+              >show</span
+            >
+          </span>
+          <a href="">Forgot password?</a>
+        </form>
+        <span class="sgn">Sign in</span>
+        <span class="or">
+          <p>or</p>
+          <hr
+        /></span>
+        <span class="spg"
+          ><img src="./gimg.png" alt="" class="gimg" />
+          <p>Sign in with Google</p></span
+        >
+        <span class="spg"
+          ><img src="./apleimg2.png" alt="" class="apleimg" />
+          <p>Sign in with Apple</p></span
+        >
+        <div class="ft">
+          <span>New to LinkedIn? </span><a href="">Join now</a>
+        </div>
+      </div>
+      <img src="./nerd.svg" alt="" />
+    </section>
+    <section class="sndsect">
+      <div class="sectdiv">
+        <h2>Explore topics you are interested in</h2>
+      </div>
+      <div class="sectdiv scd">
+        <span class="tabs">See All Topics</span>
+        <span class="tabs">Workplace</span>
+        <span class="tabs">Job Search</span>
+        <span class="tabs">Careers</span>
+        <span class="tabs">Interviewing</span>
+        <span class="tabs">Salary and Compensation</span>
+        <span class="tabs">Internships</span>
+        <span class="tabs">Employee Benefits</span>
+      </div>
+    </section>
+    <section class="trdsect">
+      <div class="idv">
+        <h2>Find the right job or internship for you</h2>
+      </div>
+      <div>
+        <span class="sgsrh">Suggested Searches</span>
+        <div class="iidiv">
+          <span>Engineering</span>
+          <span>Business Development</span>
+          <span>Finance</span>
+          <span>Administrative Assistant</span>
+          <span>Retail Associate</span>
+          <span>Customer Service</span>
+          <span>Operations</span>
+          <span>Information Technology</span>
+          <span>Marketing</span>
+          <span>Human Resources</span>
+        </div>
+        <a href="" class="aln">Show more </a>
+      </div>
+    </section>
+    <section class="fthsect">
+      <span class="aispn">Post your job for millions of people to see</span
+      ><span class="aiisect"> Post a job</span>
+    </section>
+    <section class="sixfthsetc">
+      <div class="sectD">
+        <h2>Let the right people know you’re open to work</h2>
+        <h6>
+          With the Open To Work feature, you can privately tell recruiters or
+          publicly share with the LinkedIn community that you are looking for
+          new job opportunities.
+        </h6>
+      </div>
+      <div class="sectD"></div>
+    </section>
+    <section class="svnsect">
+      <div class="mdiv">
+        <span><img src="" alt="" /></span>
+        <span><img src="" alt="" /></span>
+      </div>
+      <div class="crtctn">
+        <div class="crt">
+          <span class="nbrd">Connect with people who can help </span>
+          <span class="wbrd">Find people you know</span>
+        </div>
+        <div class="crt">
+          <span class="nbrd"> Learn the skills you need to succeed </span>
+          <span class="wbrd"> Choose a topic to learn about</span>
+        </div>
+      </div>
+    </section>
+    <section class="eigsect">
+      <h1>Join your colleagues, classmates, and friends on LinkedIn.</h1>
+      <span class="btspn">Get started </span>
+    </section>
+    <footer>
+      <div class="ftctn">
+        <div class="tbctn">
+          <span>General</span> <span>Sign Up </span><span>Help Center</span
+          ><span> About</span> <span>Press</span> <span>Blog</span>
+          <span>Careers</span> <span>Developers</span>
+        </div>
+        <div class="stbctn">
+          <span>Browse LinkedIn</span>
+          <span>Learning</span>
+          <span>Jobs</span>
+          <span>Salary</span>
+          <span>Mobile</span>
+          <span>Services</span>
+          <span>Products</span>
+        </div>
+        <div class="thrctn">
+          <span>Business Solutions</span>
+          <span>Talent</span>
+          <span>Marketing</span>
+          <span>Sales</span>
+          <span>Learning</span>
+        </div>
+        <div class="fetctn">
+          <span> Directories</span>
+          <span> Members</span>
+          <span> Jobs</span>
+          <span> Companies</span>
+          <span> Featured</span>
+          <span> Learning</span>
+          <span> Posts</span>
+          <span> Articles</span>
+          <span> Schools</span>
+          <span> News</span>
+          <span> Services</span>
+          <span> Products</span>
+          <span> Content Topics</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
